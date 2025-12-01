@@ -1,0 +1,35 @@
+.featured-project {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.project-card {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.project-header {
+  margin-bottom: 1.5rem;
+}
+
+.project-category {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.project-description {
+  font-size: 1.125rem;
+  line-height: 1.8;
+}
+
+.project-technologies {
+  padding: 1rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-technologies .tags-container {
+  justify-content: flex-start;
+}
+
