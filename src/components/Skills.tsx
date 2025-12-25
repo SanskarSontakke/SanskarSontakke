@@ -1,32 +1,7 @@
 import React, { useRef } from 'react';
 import './Skills.css';
 
-// Import liquid-glass-react - if not available, will use fallback
-let LiquidGlass: any;
-try {
-  // eslint-disable-next-line @typescript-eslint/no-require-imports
-  LiquidGlass = require('liquid-glass-react');
-  if (LiquidGlass && LiquidGlass.default) {
-    LiquidGlass = LiquidGlass.default;
-  }
-} catch (error) {
-  // Fallback: Create a simple glass effect component
-  LiquidGlass = ({ children, style, className, mouseContainer, ...props }: any) => (
-    <div 
-      style={{
-        ...style,
-        backdropFilter: 'blur(20px) saturate(180%)',
-        WebkitBackdropFilter: 'blur(20px) saturate(180%)',
-        background: 'rgba(255, 255, 255, 0.05)',
-        border: '1px solid rgba(255, 255, 255, 0.2)',
-        borderRadius: '20px',
-      }} 
-      className={className}
-    >
-      {children}
-    </div>
-  );
-}
+import LiquidGlass from './ui/LiquidGlass';
 
 function Skills() {
   const containerRef = useRef<HTMLElement>(null);
@@ -80,7 +55,7 @@ function Skills() {
         <p className="section-subtitle text-center mb-4">
           I have a diverse skill set that spans across multiple high-demand technology domains
         </p>
-        
+
         <div className="skills-grid grid grid-4">
           {skills.map((skill, index) => (
             <LiquidGlass

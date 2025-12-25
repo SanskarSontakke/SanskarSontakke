@@ -1,32 +1,7 @@
 import React, { useState, useRef } from 'react';
 import './LanguagesTools.css';
 
-// Import liquid-glass-react - if not available, will use fallback
-let LiquidGlass;
-try {
-  // eslint-disable-next-line import/no-unresolved
-  LiquidGlass = require('liquid-glass-react');
-  if (LiquidGlass && LiquidGlass.default) {
-    LiquidGlass = LiquidGlass.default;
-  }
-} catch (error) {
-  // Fallback: Create a simple glass effect component
-  LiquidGlass = ({ children, style, className, mouseContainer, ...props }) => (
-    <div 
-      style={{
-        ...style,
-        backdropFilter: 'blur(20px) saturate(180%)',
-        WebkitBackdropFilter: 'blur(20px) saturate(180%)',
-        background: 'rgba(255, 255, 255, 0.05)',
-        border: '1px solid rgba(255, 255, 255, 0.2)',
-        borderRadius: '20px',
-      }} 
-      className={className}
-    >
-      {children}
-    </div>
-  );
-}
+import LiquidGlass from './ui/LiquidGlass';
 
 function LanguagesTools() {
   const containerRef = useRef(null);
@@ -61,7 +36,7 @@ function LanguagesTools() {
         <p className="section-subtitle text-center mb-4">
           These are the primary technologies I use to bring ideas to life
         </p>
-        
+
         <div className="tools-grid">
           {techCategories.map((category, categoryIndex) => (
             <LiquidGlass
@@ -81,7 +56,7 @@ function LanguagesTools() {
               }}
               className="tool-category-card-liquid"
             >
-              <div 
+              <div
                 className="tool-category-content"
                 style={{ '--category-color': category.color }}
               >
@@ -89,7 +64,7 @@ function LanguagesTools() {
                   <span className="category-icon">{category.icon}</span>
                   <h3 className="category-title">{category.name}</h3>
                 </div>
-                
+
                 <div className="technologies-list">
                   {category.technologies.map((tech, techIndex) => (
                     <div
