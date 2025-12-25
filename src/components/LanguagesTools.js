@@ -1,7 +1,36 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import './LanguagesTools.css';
 
+// Import liquid-glass-react - if not available, will use fallback
+let LiquidGlass;
+try {
+  // eslint-disable-next-line import/no-unresolved
+  LiquidGlass = require('liquid-glass-react');
+  if (LiquidGlass && LiquidGlass.default) {
+    LiquidGlass = LiquidGlass.default;
+  }
+} catch (error) {
+  // Fallback: Create a simple glass effect component
+  LiquidGlass = ({ children, style, className, mouseContainer, ...props }) => (
+    <div 
+      style={{
+        ...style,
+        backdropFilter: 'blur(20px) saturate(180%)',
+        WebkitBackdropFilter: 'blur(20px) saturate(180%)',
+        background: 'rgba(255, 255, 255, 0.05)',
+        border: '1px solid rgba(255, 255, 255, 0.2)',
+        borderRadius: '20px',
+      }} 
+      className={className}
+    >
+      {children}
+    </div>
+  );
+}
+
 function LanguagesTools() {
+  const containerRef = useRef(null);
+  // eslint-disable-next-line no-unused-vars
   const [hoveredTech, setHoveredTech] = useState(null);
 
   const techCategories = [
@@ -9,36 +38,24 @@ function LanguagesTools() {
       name: 'Languages',
       icon: '💻',
       color: '#667eea',
-      technologies: [
-        { name: 'C', level: 85 },
-        { name: 'C++', level: 80 },
-        { name: 'Python', level: 90 },
-        { name: 'Dart', level: 85 },
-        { name: 'JavaScript', level: 95 },
-        { name: 'TypeScript', level: 90 }
-      ]
+      technologies: ['C', 'C++', 'Python', 'Dart', 'JavaScript', 'TypeScript']
     },
     {
       name: 'Web',
       icon: '🌐',
       color: '#764ba2',
-      technologies: [
-        { name: 'HTML', level: 95 },
-        { name: 'CSS', level: 90 }
-      ]
+      technologies: ['HTML', 'CSS']
     },
     {
       name: 'Version Control',
       icon: '🔧',
       color: '#f093fb',
-      technologies: [
-        { name: 'Git', level: 90 }
-      ]
+      technologies: ['Git']
     }
   ];
 
   return (
-    <section id="languages" className="languages-tools">
+    <section id="languages" className="languages-tools" ref={containerRef}>
       <div className="container">
         <h2 className="text-center mb-4">Languages & Tools</h2>
         <p className="section-subtitle text-center mb-4">
@@ -47,46 +64,46 @@ function LanguagesTools() {
         
         <div className="tools-grid">
           {techCategories.map((category, categoryIndex) => (
-            <div 
-              key={categoryIndex} 
-              className="tool-category-card"
-              style={{ '--category-color': category.color }}
+            <LiquidGlass
+              key={categoryIndex}
+              mouseContainer={containerRef}
+              displacementScale={100}
+              blurAmount={0.5}
+              saturation={140}
+              aberrationIntensity={2}
+              elasticity={0.1}
+              cornerRadius={30}
+              padding="2rem"
+              style={{
+                height: '100%',
+                display: 'flex',
+                flexDirection: 'column',
+              }}
+              className="tool-category-card-liquid"
             >
-              <div className="category-header">
-                <span className="category-icon">{category.icon}</span>
-                <h3 className="category-title">{category.name}</h3>
-              </div>
-              
-              <div className="technologies-list">
-                {category.technologies.map((tech, techIndex) => (
-                  <div
-                    key={techIndex}
-                    className="tech-item"
-                    onMouseEnter={() => setHoveredTech(`${categoryIndex}-${techIndex}`)}
-                    onMouseLeave={() => setHoveredTech(null)}
-                  >
-                    <div className="tech-name-row">
-                      <span className="tech-name">{tech.name}</span>
-                      <span className="tech-level-text">{tech.level}%</span>
+              <div 
+                className="tool-category-content"
+                style={{ '--category-color': category.color }}
+              >
+                <div className="category-header">
+                  <span className="category-icon">{category.icon}</span>
+                  <h3 className="category-title">{category.name}</h3>
+                </div>
+                
+                <div className="technologies-list">
+                  {category.technologies.map((tech, techIndex) => (
+                    <div
+                      key={techIndex}
+                      className="tech-item"
+                      onMouseEnter={() => setHoveredTech(`${categoryIndex}-${techIndex}`)}
+                      onMouseLeave={() => setHoveredTech(null)}
+                    >
+                      <span className="tech-name">{tech}</span>
                     </div>
-                    <div className="tech-level-bar">
-                      <div 
-                        className="tech-level-fill"
-                        style={{ 
-                          width: `${tech.level}%`,
-                          backgroundColor: category.color
-                        }}
-                      ></div>
-                    </div>
-                    {hoveredTech === `${categoryIndex}-${techIndex}` && (
-                      <div className="tech-tooltip">
-                        Proficiency: {tech.level}%
-                      </div>
-                    )}
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
-            </div>
+            </LiquidGlass>
           ))}
         </div>
       </div>

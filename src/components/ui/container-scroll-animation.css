@@ -1,0 +1,75 @@
+.container-scroll-wrapper {
+  height: 60rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .container-scroll-wrapper {
+    height: 80rem;
+    padding: 5rem;
+  }
+}
+
+.container-scroll-inner {
+  padding: 2.5rem 0;
+  width: 100%;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .container-scroll-inner {
+    padding: 10rem 0;
+  }
+}
+
+.container-scroll-header {
+  max-width: 80rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.container-scroll-card {
+  max-width: 80rem;
+  margin: -3rem auto 0;
+  height: 30rem;
+  width: 100%;
+  border: 4px solid #6C6C6C;
+  padding: 0.5rem;
+  background: #222222;
+  border-radius: 30px;
+  box-shadow: 0 0 #0000004d, 0 9px 20px #0000004a, 0 37px 37px #00000042, 0 84px 50px #00000026, 0 149px 60px #0000000a, 0 233px 65px #00000003;
+}
+
+@media (min-width: 768px) {
+  .container-scroll-card {
+    height: 40rem;
+    padding: 1.5rem;
+  }
+}
+
+.container-scroll-card-inner {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 1rem;
+  background: #f3f4f6;
+  padding: 1rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  .container-scroll-card-inner {
+    background: #18181b;
+  }
+}
+
+@media (min-width: 768px) {
+  .container-scroll-card-inner {
+    border-radius: 1rem;
+    padding: 1rem;
+  }
+}
+

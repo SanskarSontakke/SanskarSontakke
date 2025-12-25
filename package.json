@@ -3,9 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "framer-motion": "^10.16.16",
+    "liquid-glass-react": "git+https://github.com/rdev/liquid-glass-react.git",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
+    "typescript": "^5.3.3"
   },
   "scripts": {
     "start": "react-scripts start",
