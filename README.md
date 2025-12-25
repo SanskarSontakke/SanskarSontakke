@@ -41,7 +41,7 @@
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=flat&logo=git&logoColor=white)
 ![Arduino](https://img.shields.io/badge/-Arduino-00979D?style=flat&logo=Arduino&logoColor=white)
 
-## � Achievements
+## 🏆 Achievements
 
 - 🥈 **State Rank 2** – MOMS Examination
 - 🥇 **Gold Medal** – IMO & NSO (Class 7)
@@ -56,10 +56,10 @@
 | [**ZPGuruji Shala**](https://play.google.com/store/apps/details?id=com.zpguruji.shala) | Educational quiz platform for students | ![Flutter](https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white) |
 | [**The Forge Gen**](https://theforgegen.vercel.app/) | Suite of open-source generative AI tools | ![React](https://img.shields.io/badge/React-20232a?style=flat-square&logo=react&logoColor=61DAFB) |
 
-## � GitHub Stats
+## 📊 GitHub Stats
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=SanskarSontakke&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" alt="GitHub Stats" height="180" />
+  <img src="https://github-readme-stats.vercel.app/api?username=SanskarSontakke&show_icons=true&theme=tokyonight&hide_border=true" alt="GitHub Stats" height="180" />
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=SanskarSontakke&theme=tokyonight&hide_border=true" alt="GitHub Streak" height="180" />
 </div>
 
