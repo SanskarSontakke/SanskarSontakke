@@ -41,17 +41,13 @@ function FeaturedProject() {
               aberrationIntensity={2}
               elasticity={0.1}
               cornerRadius={30}
-              padding="3rem 2.5rem"
-              style={{
-                width: '100%',
-                height: '100%'
-              }}
+              padding="2rem"
               className="project-card-liquid"
             >
               <div className="project-card card">
                 <div className="project-card-content">
                   <div className="project-header">
-                    <h3 className="text-primary mb-3">{project.title}</h3>
+                    <h3 className="text-primary">{project.title}</h3>
                     <div className="project-category">
                       {project.category.map((cat, i) => (
                         <span key={i} className="tag">{cat}</span>
@@ -59,12 +55,12 @@ function FeaturedProject() {
                     </div>
                   </div>
 
-                  <p className="project-description text-secondary mb-4">
+                  <p className="project-description text-secondary">
                     {project.description}
                   </p>
 
-                  <div className="project-technologies mb-4">
-                    <h4 style={{ fontSize: '1rem', marginBottom: '1rem', color: '#a78bfa' }}>Technologies Used:</h4>
+                  <div className="project-technologies">
+                    <h4>Technologies Used:</h4>
                     <div className="tags-container">
                       {project.technologies.map((tech, i) => (
                         <span key={i} className="tag">{tech}</span>
