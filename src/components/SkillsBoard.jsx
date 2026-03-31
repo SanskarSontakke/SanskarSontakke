@@ -61,7 +61,7 @@ const skillDomains = [
   }
 ];
 
-const DomainCard = ({ domain, index }) => (
+const DomainCard = ({ domain }) => (
   <Paper
     elevation={0}
     className={`hover-lift hover-glow-${domain.color}`}
@@ -126,7 +126,7 @@ const SkillsBoard = () => {
         <Grid container spacing={3}>
           {skillDomains.map((domain, i) => (
             <Grid key={i} size={{ xs: 12, sm: 6, md: 4, lg: 3 }}>
-              <DomainCard domain={domain} index={i} />
+              <DomainCard domain={domain} />
             </Grid>
           ))}
         </Grid>
