@@ -79,7 +79,7 @@ const Navbar = () => {
 
           {isMobile ? (
             <>
-              <IconButton color="primary" onClick={toggleDrawer(true)} sx={{ p: 1.5 }}>
+              <IconButton aria-label="Open navigation menu" color="primary" onClick={toggleDrawer(true)} sx={{ p: 1.5 }}>
                 <MenuIcon sx={{ fontSize: '28px' }} />
               </IconButton>
               <SwipeableDrawer
