@@ -22,7 +22,7 @@ const getColorValue = (colorName) => {
   }
 };
 
-const AchievementCard = ({ item, index }) => {
+const AchievementCard = ({ item }) => {
   const scheme = getColorValue(item.color);
   return (
     <Paper 
@@ -85,7 +85,7 @@ const Achievements = () => {
         <Grid container spacing={3.5}>
           {achievementData.map((item, i) => (
             <Grid key={i} size={{ xs: 12, sm: 6, md: 4 }}>
-              <AchievementCard item={item} index={i} />
+              <AchievementCard item={item} />
             </Grid>
           ))}
         </Grid>
