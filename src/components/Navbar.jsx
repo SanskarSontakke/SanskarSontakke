@@ -79,10 +79,18 @@ const Navbar = () => {
 
           {isMobile ? (
             <>
-              <IconButton aria-label="Open navigation menu" color="primary" onClick={toggleDrawer(true)} sx={{ p: 1.5 }}>
+              <IconButton
+                color="primary"
+                onClick={toggleDrawer(true)}
+                sx={{ p: 1.5 }}
+                aria-label="Open navigation menu"
+                aria-expanded={drawerOpen}
+                aria-controls="mobile-nav-menu"
+              >
                 <MenuIcon sx={{ fontSize: '28px' }} />
               </IconButton>
               <SwipeableDrawer
+                id="mobile-nav-menu"
                 anchor="right"
                 open={drawerOpen}
                 onClose={toggleDrawer(false)}
