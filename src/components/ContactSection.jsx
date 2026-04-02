@@ -18,7 +18,7 @@ const ContactLink = ({ icon, label, value, href }) => {
         display: 'flex', alignItems: 'center', gap: 2.2, p: '16px 20px', 
         bgcolor: 'rgba(8, 20, 8, 0.6)', border: '1.5px solid rgba(212, 167, 81, 0.2)', 
         borderRadius: 1.5, textDecoration: 'none', transition: 'all 0.2s',
-        '&:hover': { borderColor: 'secondary.main', bgcolor: 'rgba(212, 167, 81, 0.08)', transform: 'translateX(6px)' }
+        '&:hover, &:focus-visible': { borderColor: 'secondary.main', bgcolor: 'rgba(212, 167, 81, 0.08)', transform: 'translateX(6px)', outline: 'none' }
       }}
     >
     <Box sx={{ fontSize: '24px', width: 32, textAlign: 'center' }}>{icon}</Box>

@@ -175,10 +175,11 @@ const Navbar = () => {
                         transition: 'width 0.3s',
                         boxShadow: '0 0 8px var(--glow)'
                       },
-                      '&:hover': { 
+                      '&:hover, &:focus-visible': {
                         color: 'primary.main', 
                         textShadow: '0 0 10px rgba(0,255,136,0.4)',
-                        '&::after': { width: '80%' }
+                        '&::after': { width: '80%' },
+                        outline: 'none'
                       }
                     }}
                   >

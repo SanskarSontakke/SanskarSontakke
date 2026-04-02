@@ -107,6 +107,7 @@ const ProjectCard = ({ data, delay }) => {
             variant="outlined" 
             color={themeMuiColor}
             size="medium"
+            aria-label={`${data.linkText || 'View Project'} for ${data.title} (opens in new tab)`}
             sx={{ 
               fontSize: '11px', 
               fontWeight: 800,
