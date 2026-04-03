@@ -122,7 +122,13 @@ const Navbar = () => {
                           mb: 2, 
                           bgcolor: isActive ? 'rgba(0, 255, 136, 0.1)' : 'transparent',
                           border: isActive ? '1px solid rgba(0, 255, 136, 0.5)' : '1px solid transparent',
-                          '&:hover': { bgcolor: 'rgba(0,255,136,0.15)' } 
+                          '&:hover': { bgcolor: 'rgba(0,255,136,0.15)' },
+                          '&:focus-visible': {
+                            outline: 'none',
+                            bgcolor: 'rgba(0,255,136,0.15)',
+                            border: '1px solid var(--glow)',
+                            boxShadow: '0 0 10px var(--glow)'
+                          }
                         }}
                       >
                         <ListItemText 
@@ -178,6 +184,12 @@ const Navbar = () => {
                       '&:hover': { 
                         color: 'primary.main', 
                         textShadow: '0 0 10px rgba(0,255,136,0.4)',
+                        '&::after': { width: '80%' }
+                      },
+                      '&:focus-visible': {
+                        outline: 'none',
+                        color: 'primary.main',
+                        textShadow: '0 0 10px rgba(0,255,136,0.8)',
                         '&::after': { width: '80%' }
                       }
                     }}

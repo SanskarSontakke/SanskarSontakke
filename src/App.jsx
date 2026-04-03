@@ -26,7 +26,25 @@ function App() {
         <RippleCanvas />
         <Navbar />
         
-        <main>
+        <a
+          href="#main-content"
+          style={{
+            position: 'absolute',
+            top: '-40px',
+            left: '0',
+            background: 'var(--glow)',
+            color: '#000',
+            padding: '8px 16px',
+            zIndex: 9999,
+            fontWeight: 'bold',
+            transition: 'top 0.3s',
+          }}
+          onFocus={(e) => e.target.style.top = '0'}
+          onBlur={(e) => e.target.style.top = '-40px'}
+        >
+          Skip to main content
+        </a>
+        <main id="main-content" tabIndex={-1}>
           <Hero />
           <AboutSection />
           <TechStack />
