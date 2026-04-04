@@ -1,0 +1,3 @@
+## 2025-04-04 - [Accessibility] Added focus-visible styles to custom interactive elements
+**Learning:** MUI `<Box component="a">` used for links strips default browser focus rings. In a visually rich theme like this (dark PCB styling with custom outlines), this completely breaks keyboard navigation visibility. Adding a generic hover state does not automatically add a focus state.
+**Action:** Always add explicit `&:focus-visible` styles with a high-contrast outline to any custom interactive component (e.g. `<Box component="a">`, `<Box component="button">`) alongside the `&:hover` state to maintain WCAG compliant keyboard accessibility.
