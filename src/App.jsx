@@ -22,11 +22,12 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <div className="portfolio-app">
+        <a href="#main-content" className="skip-link">Skip to main content</a>
         <TraceCanvas />
         <RippleCanvas />
         <Navbar />
         
-        <main>
+        <main id="main-content">
           <Hero />
           <AboutSection />
           <TechStack />

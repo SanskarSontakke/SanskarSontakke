@@ -1,0 +1,3 @@
+## 2024-04-05 - Add skip-to-main-content bypass for canvas overlays
+**Learning:** For React applications with heavy visual canvas overlays (like `TraceCanvas` and `RippleCanvas`) at the root level, keyboard navigation can become extremely confusing and cumbersome. Screen reader or keyboard-only users will have to navigate through the canvas layer before reaching actual UI components.
+**Action:** Always implement a top-level `skip-to-main-content` keyboard shortcut as the very first element in the DOM (hidden by default, revealed on focus) to immediately bypass these non-interactive decorative overlays.
