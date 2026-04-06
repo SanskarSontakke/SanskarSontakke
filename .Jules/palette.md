@@ -1,0 +1,3 @@
+## 2025-05-18 - Missing Keyboard Focus on Custom Elements and Skip Links
+**Learning:** MUI's `Box` with `component="a"` (used as a link) strips default browser focus rings, leaving custom links inaccessible for keyboard users if hover states aren't replicated via `&:focus-visible`. Additionally, absolute/fixed overlays (like `TraceCanvas` and `RippleCanvas`) create navigation friction for keyboard users, making a top-level skip-to-main-content link absolutely critical.
+**Action:** Always explicitly define `&:focus-visible` styles on custom interactive elements (especially `<Box component="a">`), and implement a top-level skip link for applications heavily relying on canvas or graphical background overlays.
