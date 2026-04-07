@@ -147,6 +147,11 @@ section {
   box-shadow: 0 0 14px rgba(200,153,58,0.2);
 }
 
+/* ─── ACCESSIBILITY ─── */
+.skip-link:focus {
+  transform: translateY(0) !important;
+}
+
 /* ─── ANIMATIONS ─── */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(20px); }

@@ -22,11 +22,29 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <div className="portfolio-app">
+        <a
+          href="#main-content"
+          className="skip-link"
+          style={{
+            position: 'absolute',
+            left: '0',
+            background: '#00ff88',
+            color: '#000',
+            padding: '8px 16px',
+            zIndex: 9999,
+            fontWeight: 'bold',
+            textDecoration: 'none',
+            transition: 'transform 0.2s ease',
+            transform: 'translateY(-100%)',
+          }}
+        >
+          Skip to main content
+        </a>
         <TraceCanvas />
         <RippleCanvas />
         <Navbar />
         
-        <main>
+        <main id="main-content">
           <Hero />
           <AboutSection />
           <TechStack />
