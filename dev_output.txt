@@ -1,0 +1,9 @@
+
+> portfolio@0.0.0 dev /app
+> vite
+
+
+  VITE v8.0.3  ready in 378 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
