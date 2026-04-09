@@ -1,0 +1,3 @@
+## 2025-02-23 - Missing focus rings on MUI Box component="a"
+**Learning:** Using custom MUI elements like `<Box component="a">` strips default focus rings, which creates severe keyboard accessibility issues because navigation links and interactive elements do not show focus states by default.
+**Action:** Always explicitly add `&:focus-visible` styles alongside `&:hover` states when using `<Box component="a">` or `<ListItem component="a">` to ensure keyboard navigation remains accessible.
