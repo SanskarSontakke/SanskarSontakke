@@ -1,0 +1,21 @@
+{
+  "version": "1.0",
+  "project_name": "test",
+  "config": {
+    "concurrency": 1,
+    "aspect_ratio": "16:9"
+  },
+  "metadata": {
+    "created_at": "2026-07-05T00:00:00Z",
+    "style_file": "style.json"
+  },
+  "images": [
+    {
+      "id": "img-001",
+      "prompt": "A serene mountain valley at golden hour, warm amber and golden sunlight casting long shadows across rolling meadows with wildflowers, misty mountain peaks in the background with cool blue atmosphere, cinematic photography style with shallow depth of field, volumetric light rays piercing through the air, photorealistic, warm color grading, natural and atmospheric",
+      "output": "images/img-001.png",
+      "reference_images": [],
+      "status": "pending"
+    }
+  ]
+}

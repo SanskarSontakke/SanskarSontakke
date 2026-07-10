@@ -1,0 +1,28 @@
+{
+  "project_name": "test",
+  "version": "1.0",
+  "use_case": "concept-art",
+  "visual_style": {
+    "art_style": "natural cinematic photography with warm, golden-hour lighting and shallow depth of field",
+    "color_palette": {
+      "primary": ["warm amber", "soft golden", "deep bronze"],
+      "secondary": ["cool blue shadows", "sage green", "cream"],
+      "accent": ["warm orange glow"],
+      "avoid": ["harsh neon", "oversaturated colors", "flat lighting"]
+    },
+    "lighting": "golden hour sunlight with soft shadows, volumetric light rays, natural rim lighting",
+    "composition": "cinematic framing with leading lines, rule of thirds, foreground-midground-background depth"
+  },
+  "subject_consistency": {
+    "main_subject": "natural landscape or outdoor scene",
+    "environment": "natural outdoor setting with cinematic mood"
+  },
+  "output_spec": {
+    "aspect_ratio": "16:9",
+    "count_target": 1
+  },
+  "constraints": {
+    "avoid": ["artificial elements", "digital artifacts", "unrealistic proportions"],
+    "maintain": ["cinematic quality", "natural lighting", "photorealistic style"]
+  }
+}
